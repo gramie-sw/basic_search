@@ -9,8 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Daniel Grawunder, Christian Mierich"]
   spec.email         = ["gramie.sw@gmail.com"]
   spec.description   = %q{A Ruby on Rails basic table sorter gem}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
   spec.license       = "EPL 1.0"
 
   spec.files         = `git ls-files`.split($/)
