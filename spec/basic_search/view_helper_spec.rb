@@ -8,7 +8,7 @@ describe 'ViewHelpers' do
     @view_helper = @view_helper_class.new
   end
 
-  describe '#search_params_hash' do
+  describe '#params_search_hash' do
 
     it 'should return existing hash with key search from params' do
       @view_helper.stub(:params).and_return({search: 'search_value'})
@@ -21,12 +21,12 @@ describe 'ViewHelpers' do
     end
   end
 
-  describe '#search_param_hash' do
+  describe '#sortable_with_search_param_hash' do
 
-    it 'should call sortable' do
+    it 'should call sortable_with_search_param_hash' do
       @view_helper.should_receive(:params_search_hash).and_return({search: 'search_value'})
       @view_helper.should_receive(:sortable).with(['column1'], 'title', {search: 'search_value'})
-      @view_helper.search_param_hash(['column1'], 'title')
+      @view_helper.sortable_with_search_param_hash(['column1'], 'title')
     end
   end
 end
