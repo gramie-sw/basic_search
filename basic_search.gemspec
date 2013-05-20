@@ -3,20 +3,21 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'basic_search/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "basic_search"
-  spec.version       = BasicSearch::VERSION
-  spec.authors       = ["Daniel Grawunder, Christian Mierich"]
-  spec.email         = ["gramie.sw@gmail.com"]
-  spec.description   = %q{A Ruby on Rails basic table sorter gem}
-  spec.license       = "EPL 1.0"
+Gem::Specification.new do |gem|
+  gem.name          = "basic_search"
+  gem.version       = BasicSearch::VERSION
+  gem.authors       = ["Daniel Grawunder, Christian Mierich"]
+  gem.email         = ["gramie.sw@gmail.com"]
+  gem.description   = %q{A Ruby on Rails basic search gem}
+  gem.summary = %q{An easy to use basic search solution for Ruby on Rails.}
+  gem.license       = "EPL 1.0"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  gem.files         = `git ls-files`.split($/)
+  gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.require_paths = ["lib"]
 
-  spec.add_development_dependency "rspec"
-  #spec.add_development_dependency "bundler", "~> 1.3"
-  #spec.add_development_dependency "rake"
+  gem.add_development_dependency "rspec", "~> 2.13"
+  gem.add_development_dependency "activesupport", "~>3.2"
+  gem.add_development_dependency "guard-rspec", "~>2.6.0"
 end
