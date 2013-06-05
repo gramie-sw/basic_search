@@ -1,12 +1,12 @@
 module BasicSearch
   module ViewHelpers
 
-    def params_search_hash
+    def search_param_hash
       params[:search] ? { search: params[:search] } : {}
     end
 
-    def sortable_with_search_param_hash columns, title
-      sortable(columns, title, params_search_hash)
+    def sortable_with_search columns, title
+      sortable(columns, title, search_param_hash)
     end
   end
 end
