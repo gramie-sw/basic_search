@@ -8,6 +8,7 @@ Gem::Specification.new do |gem|
   gem.version = BasicSearch::VERSION
   gem.authors = ["Daniel Grawunder, Christian Mierich"]
   gem.email = ["gramie.sw@gmail.com"]
+  gem.homepage = "https://github.com/gramie-sw/basic_search"
   gem.description = %q{A Ruby on Rails basic search gem}
   gem.summary = %q{An easy to use basic search solution for Ruby on Rails.}
   gem.license = "EPL 1.0"
