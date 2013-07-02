@@ -7,7 +7,7 @@ module BasicSearch
           where_conditions = columns.map { |column| column.to_s + ' LIKE :search_value' }.join(' OR ')
           where(where_conditions, {search_value: "%#{search_term}%"})
         else
-          scoped
+          all
         end
       end
     end

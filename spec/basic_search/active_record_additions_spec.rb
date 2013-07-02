@@ -15,7 +15,7 @@ describe 'ActiveRecordAdditions' do
     end
 
     it 'should return scoped if search_term is nil' do
-      @active_record_class.should_receive(:scoped)
+      @active_record_class.should_receive(:all)
       @active_record_class.search()
     end
   end
